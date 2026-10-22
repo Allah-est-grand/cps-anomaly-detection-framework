@@ -1,0 +1,77 @@
+================================================================================
+ABLATION ANALYSIS REPORT
+Component Contribution Analysis for Adaptive Feedback Framework
+================================================================================
+Generated: 2026-07-28 05:39:17
+Framework Version: 1.0.0
+Analysis Status: COMPLETE
+
+ANALYSIS OVERVIEW:
+  - Data source: results\adaptive\retraining\datasets\retraining_dataset_combined.csv
+  - Random seeds: [42, 123, 2024, 2025, 3407]
+  - Models evaluated: XGBoost, RandomForest
+  - Configurations tested: Baseline, Retraining_No_Weighting, Weighted_Retraining
+  - Anomaly weight: 3.0
+  - Normal weight: 1.0
+  - Total experiments: 30
+
+PURPOSE OF ABLATION STUDY:
+  This ablation study aims to isolate and quantify the contribution
+  of different components in the Adaptive Feedback Framework:
+  1. Baseline: Standard training without adaptive components
+  2. Retraining (No Weighting): Contribution of additional retraining data
+  3. Weighted Retraining: Additional contribution of anomaly-sensitive weighting
+
+RESULTS SUMMARY:
+  - XGBoost:
+      Retraining Contribution (data only):
+          F1: +0.0013
+          Recall: +0.0018
+          FN Reduction: 19.8
+      Weighting Contribution (additional):
+          F1: +0.0106
+          Recall: +0.0313
+          FN Reduction: 342.0
+      Total Adaptive Contribution:
+          F1: +0.0119
+          Recall: +0.0331
+          FN Reduction: 361.8
+  - RandomForest:
+      Retraining Contribution (data only):
+          F1: -0.0028
+          Recall: -0.0048
+          FN Reduction: -52.4
+      Weighting Contribution (additional):
+          F1: +0.0352
+          Recall: +0.0616
+          FN Reduction: 673.4
+      Total Adaptive Contribution:
+          F1: +0.0324
+          Recall: +0.0568
+          FN Reduction: 621.0
+
+SCIENTIFIC INTERPRETATION:
+
+  XGBoost Findings:
+    - The results indicate a positive total adaptive contribution (F1: +0.0119)
+    - Anomaly weighting provides additional benefit (F1: +0.0106)
+
+  RandomForest Findings:
+    - The results indicate a clear total adaptive contribution (F1: +0.0324)
+    - Anomaly weighting provides additional benefit (F1: +0.0352)
+
+  General Conclusions:
+    - The contribution is model-dependent
+    - Retraining data provides a baseline improvement
+    - Weighted retraining provides a clearer improvement for RandomForest
+    - The ablation results support the usefulness of the adaptive feedback module
+      under the tested setting
+
+  ⚠️  CAUTION:
+  ⚠️  - These results are from ablation analysis on a single dataset
+  ⚠️  - Do not claim universal improvement without external validation
+  ⚠️  - The contribution magnitude may vary across different CPS scenarios
+
+================================================================================
+END OF ABLATION ANALYSIS REPORT
+================================================================================

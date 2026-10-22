@@ -1,0 +1,97 @@
+{
+  "reference": {
+    "accuracy": 0.9979017462326808,
+    "precision": 0.9853245531514582,
+    "recall": 0.9588940767188502,
+    "f1_score": 0.9719296617640236,
+    "false_positive": 156,
+    "false_negative": 449,
+    "true_positive": 10474,
+    "true_negative": 277256
+  },
+  "repeat_1": {
+    "metrics": {
+      "accuracy": 0.9979468326772678,
+      "precision": 0.9781542164213645,
+      "recall": 0.9674082211846562,
+      "f1_score": 0.9727515419313265,
+      "false_positive": 236,
+      "false_negative": 356,
+      "true_positive": 10567,
+      "true_negative": 277176,
+      "evaluation_samples": 288335
+    },
+    "epochs_trained": 26,
+    "best_val_loss": 0.006785001140087843,
+    "y_pred_hash": "4de4f2515e5a5dd4c821aa837d81b895dc14c24286ccb7168ed2d63b1bf4149c",
+    "y_proba_hash": "080d6c9dce35f4d81fc0891e8f8a3efdebb2158c64152a3c2062a84cb248c087",
+    "error": null
+  },
+  "repeat_2": {
+    "metrics": {
+      "accuracy": 0.9977248686423777,
+      "precision": 0.9780240245832945,
+      "recall": 0.9615490249931338,
+      "f1_score": 0.9697165543347798,
+      "false_positive": 236,
+      "false_negative": 420,
+      "true_positive": 10503,
+      "true_negative": 277176,
+      "evaluation_samples": 288335
+    },
+    "epochs_trained": 19,
+    "best_val_loss": 0.006727137137204409,
+    "y_pred_hash": "2fe69200e27b42609112ccefabce00461fe85fffd9a0fbeb8fc5d20abaae4841",
+    "y_proba_hash": "b34023b4628f36e642904b098d6d90f9d6143850cfa76db187b97765a527d2a5",
+    "error": null
+  },
+  "repeat_comparison": {
+    "y_true_identical": true,
+    "y_pred_identical": false,
+    "different_prediction_count": 398,
+    "max_probability_difference": 0.9985842108726501,
+    "mean_probability_difference": 0.0018449393101036549,
+    "y_pred_hash_identical": false,
+    "y_proba_hash_identical": false,
+    "epochs_trained_identical": false,
+    "best_val_loss_difference": 5.7864002883434296e-05,
+    "note": "Both repeats use random_state=42, so train/retrain/test splits are deterministic and identical."
+  },
+  "environment": {
+    "platform": "linux",
+    "python_version": "3.11.14",
+    "numpy_version": "2.4.6",
+    "pandas_version": "3.0.6",
+    "sklearn_version": "1.9.1",
+    "tensorflow_version": "2.21.0",
+    "keras_version": "3.15.1",
+    "cuda_build_info": true,
+    "cudnn_version": "9",
+    "cuda_version": "12.5.1",
+    "visible_gpu_devices": 1,
+    "gpu_device_names": [
+      "/physical_device:GPU:0"
+    ],
+    "TF_ENABLE_ONEDNN_OPTS": "not set",
+    "TF_DETERMINISTIC_OPS": "not set",
+    "CUBLAS_WORKSPACE_CONFIG": "not set",
+    "PYTHONHASHSEED": "not set"
+  },
+  "timestamp": "2026-10-08T23:28:54.854596",
+  "repeat_1_vs_reference": {
+    "accuracy_match": true,
+    "precision_match": false,
+    "recall_match": false,
+    "f1_match": false,
+    "fp_match": false,
+    "fn_match": false
+  },
+  "repeat_2_vs_reference": {
+    "accuracy_match": false,
+    "precision_match": false,
+    "recall_match": false,
+    "f1_match": false,
+    "fp_match": false,
+    "fn_match": false
+  }
+}

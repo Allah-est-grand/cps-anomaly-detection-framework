@@ -1,0 +1,130 @@
+{
+  "analysis_status": "complete",
+  "tested_seeds": [
+    42,
+    123,
+    2024,
+    2025,
+    3407
+  ],
+  "evaluated_models": [
+    "XGBoost",
+    "RandomForest"
+  ],
+  "configurations": [
+    "Baseline",
+    "Retraining_No_Weighting",
+    "Weighted_Retraining"
+  ],
+  "anomaly_weight": 3.0,
+  "normal_weight": 1.0,
+  "statistics": {
+    "XGBoost": {
+      "Baseline": {
+        "n_seeds": 5,
+        "mean_f1": 0.9508,
+        "std_f1": 0.0018,
+        "mean_recall": 0.9104,
+        "std_recall": 0.004,
+        "mean_precision": 0.9951,
+        "std_precision": 0.001,
+        "mean_fn": 979.0,
+        "std_fn": 43.39
+      },
+      "Retraining_No_Weighting": {
+        "n_seeds": 5,
+        "mean_f1": 0.9521,
+        "std_f1": 0.0023,
+        "mean_recall": 0.9122,
+        "std_recall": 0.004,
+        "mean_precision": 0.9957,
+        "std_precision": 0.0005,
+        "mean_fn": 959.2,
+        "std_fn": 43.18
+      },
+      "Weighted_Retraining": {
+        "n_seeds": 5,
+        "mean_f1": 0.9627,
+        "std_f1": 0.0014,
+        "mean_recall": 0.9435,
+        "std_recall": 0.0027,
+        "mean_precision": 0.9827,
+        "std_precision": 0.0008,
+        "mean_fn": 617.2,
+        "std_fn": 29.18
+      }
+    },
+    "RandomForest": {
+      "Baseline": {
+        "n_seeds": 5,
+        "mean_f1": 0.9085,
+        "std_f1": 0.0048,
+        "mean_recall": 0.8328,
+        "std_recall": 0.0081,
+        "mean_precision": 0.9994,
+        "std_precision": 0.0003,
+        "mean_fn": 1827.0,
+        "std_fn": 87.9
+      },
+      "Retraining_No_Weighting": {
+        "n_seeds": 5,
+        "mean_f1": 0.9057,
+        "std_f1": 0.0021,
+        "mean_recall": 0.828,
+        "std_recall": 0.0035,
+        "mean_precision": 0.9995,
+        "std_precision": 0.0003,
+        "mean_fn": 1879.4,
+        "std_fn": 38.7
+      },
+      "Weighted_Retraining": {
+        "n_seeds": 5,
+        "mean_f1": 0.9409,
+        "std_f1": 0.0019,
+        "mean_recall": 0.8896,
+        "std_recall": 0.0035,
+        "mean_precision": 0.9984,
+        "std_precision": 0.0006,
+        "mean_fn": 1206.0,
+        "std_fn": 38.68
+      }
+    }
+  },
+  "ablation_contributions": {
+    "XGBoost": {
+      "retraining_contribution": {
+        "f1_contribution": 0.0013,
+        "recall_contribution": 0.0018,
+        "fn_reduction": 19.8
+      },
+      "weighting_contribution": {
+        "f1_contribution": 0.0106,
+        "recall_contribution": 0.0313,
+        "fn_reduction": 342.0
+      },
+      "total_adaptive_contribution": {
+        "f1_contribution": 0.0119,
+        "recall_contribution": 0.0331,
+        "fn_reduction": 361.8
+      }
+    },
+    "RandomForest": {
+      "retraining_contribution": {
+        "f1_contribution": -0.0028,
+        "recall_contribution": -0.0048,
+        "fn_reduction": -52.4
+      },
+      "weighting_contribution": {
+        "f1_contribution": 0.0352,
+        "recall_contribution": 0.0616,
+        "fn_reduction": 673.4
+      },
+      "total_adaptive_contribution": {
+        "f1_contribution": 0.0324,
+        "recall_contribution": 0.0568,
+        "fn_reduction": 621.0
+      }
+    }
+  },
+  "total_experiments": 30
+}

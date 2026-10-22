@@ -1,0 +1,53 @@
+================================================================================
+LSTM WEIGHT SENSITIVITY MULTI-SEED VALIDATION REPORT
+================================================================================
+Generated: 2026-10-05 16:53:23
+
+EXPERIMENTAL CONFIGURATION:
+  - Seeds: [42, 123, 2024, 2025, 3407]
+  - Anomaly weights: [1.0, 1.5, 2.0, 2.5, 3.0]
+  - Normal weight: 1.0
+  - Time steps: 10
+  - Epochs: 50, Batch size: 64, Patience: 10
+
+AGGREGATED RESULTS:
+  - Weight 1.0:
+      Mean F1: 0.9719 ± 0.0020
+      Mean Precision: 0.9817
+      Mean Recall: 0.9623
+      Mean FN: 123.40 ± 14.12
+      Mean FP: 59.00 ± 14.37
+  - Weight 1.5:
+      Mean F1: 0.9682 ± 0.0034
+      Mean Precision: 0.9709
+      Mean Recall: 0.9656
+      Mean FN: 112.60 ± 32.81
+      Mean FP: 95.60 ± 46.77
+  - Weight 2.0:
+      Mean F1: 0.9679 ± 0.0031
+      Mean Precision: 0.9677
+      Mean Recall: 0.9681
+      Mean FN: 104.40 ± 15.47
+      Mean FP: 106.00 ± 27.15
+  - Weight 2.5:
+      Mean F1: 0.9658 ± 0.0046
+      Mean Precision: 0.9591
+      Mean Recall: 0.9727
+      Mean FN: 89.60 ± 12.50
+      Mean FP: 136.40 ± 41.04
+  - Weight 3.0:
+      Mean F1: 0.9655 ± 0.0042
+      Mean Precision: 0.9583
+      Mean Recall: 0.9729
+      Mean FN: 88.80 ± 15.29
+      Mean FP: 139.00 ± 35.18
+
+SELECTED GLOBAL CANDIDATE WEIGHT: 1.0
+
+SCIENTIFIC NOTES:
+  - Final test set was completely preserved and NOT used for weight selection.
+  - Weight selection based on mean validation F1 across 5 seeds.
+  - This is a 'selected global candidate weight', NOT an 'optimal weight'.
+  - Final test evaluation will be performed in a separate experiment.
+
+================================================================================

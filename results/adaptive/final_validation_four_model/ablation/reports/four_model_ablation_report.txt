@@ -1,0 +1,45 @@
+================================================================================
+FOUR-MODEL ABLATION EXTENSION REPORT
+================================================================================
+Generated: 2026-10-07 15:46:12
+Framework Version: 1.0.0
+Thesis Project: CPS Anomaly Detection Framework
+
+EXPERIMENTAL CONFIGURATION:
+  - Models: ['XGBoost', 'RandomForest', 'LinearSVM', 'LSTM']
+  - Seeds: [42, 123, 2024, 2025, 3407]
+  - Variants: ['baseline', 'retraining_without_weighting', 'weighted_retraining']
+  - Anomaly weights: {'XGBoost': 3.0, 'RandomForest': 3.0, 'LinearSVM': 3.0, 'LSTM': 1.0}
+
+EXISTING ABLATION REUSE:
+  - Compatible existing results: True
+  - Reused models: XGBoost, RandomForest
+
+CONTRIBUTION ANALYSIS:
+
+  XGBoost (weight=3.0):
+    - Total F1 contribution: +0.0119
+    - Total FN reduction: +361.8
+
+  RandomForest (weight=3.0):
+    - Total F1 contribution: +0.0324
+    - Total FN reduction: +621.0
+
+  LinearSVM (weight=3.0):
+    - Total F1 contribution: +0.0241
+    - Total FN reduction: +524.4
+
+  LSTM (weight=1.0):
+    - Total F1 contribution: +0.0039
+    - Total FN reduction: +46.4
+    - NOTE: No anomaly up-weighting selected (weight=1.0)
+
+SCIENTIFIC NOTES:
+  - Positive FN reduction means improvement (fewer false negatives)
+  - For LSTM, both retraining variants use weight=1.0
+  - This reflects the validated global candidate weight from weight sensitivity pilot
+  - No artificial weighting benefit is fabricated for LSTM
+
+================================================================================
+END OF FOUR-MODEL ABLATION EXTENSION REPORT
+================================================================================

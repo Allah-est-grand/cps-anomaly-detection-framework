@@ -1,0 +1,6 @@
+corrected_fn,persistent_fn,newly_introduced_fn,source_fn,target_fn,fn_reduction,corrected_fp,persistent_fp,newly_introduced_fp,source_fp,target_fp,fp_reduction,source_f1,target_f1,f1_change,source_variant,target_variant,comparison,seed,model_name
+522,2521,4,3043,2525,518,2,96,160,98,256,-158,0.8338358990636406,0.8579600592471526,0.0241241601835119,baseline,weighted_retraining,baseline_vs_weighted,42,LinearSVM
+516,2566,5,3082,2571,511,1,107,146,108,253,-145,0.8309844230157889,0.8554019457245263,0.0244175227087374,baseline,weighted_retraining,baseline_vs_weighted,123,LinearSVM
+546,2477,0,3023,2477,546,4,100,168,104,268,-164,0.8348037402926726,0.8602270991394674,0.0254233588467948,baseline,weighted_retraining,baseline_vs_weighted,2024,LinearSVM
+503,2518,3,3021,2521,500,4,104,165,108,269,-161,0.8347504621072088,0.857624004898959,0.0228735427917501,baseline,weighted_retraining,baseline_vs_weighted,2025,LinearSVM
+547,2506,1,3053,2507,546,3,104,211,107,315,-208,0.8328219236059676,0.8564306064306064,0.0236086828246387,baseline,weighted_retraining,baseline_vs_weighted,3407,LinearSVM

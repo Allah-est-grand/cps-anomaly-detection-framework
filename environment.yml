@@ -1,0 +1,23 @@
+# Draft environment from the CURRENT Jupyter_3.11 installation,
+# NOT independently confirmed as the exact historical experiment environment.
+# A fresh installation of this file has NOT been tested.
+name: cps-anomaly-detection
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11.14
+  - pip
+  - pip:
+      - numpy==2.4.3
+      - pandas==3.0.1
+      - scipy==1.17.1
+      - scikit-learn==1.8.0
+      - xgboost==3.2.0
+      - tensorflow==2.21.0
+      - keras==3.13.2
+      - matplotlib==3.10.8
+      - joblib==1.5.3
+      - scikit-optimize==0.10.2
+      - seaborn==0.13.2
+      - tqdm==4.67.3

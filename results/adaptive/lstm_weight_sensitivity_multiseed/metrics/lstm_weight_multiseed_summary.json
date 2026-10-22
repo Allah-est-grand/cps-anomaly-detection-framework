@@ -1,0 +1,78 @@
+{
+  "selected_global_candidate_weight": 1.0,
+  "aggregated_statistics": [
+    {
+      "anomaly_weight": 1.0,
+      "mean_f1": 0.9718914588323466,
+      "std_f1": 0.0019534212721169842,
+      "mean_precision": 0.9816581724744682,
+      "std_precision": 0.004323727135920651,
+      "mean_recall": 0.9623410919260783,
+      "std_recall": 0.004310601104686263,
+      "mean_fn": 123.4,
+      "std_fn": 14.117365193264641,
+      "mean_fp": 59.0,
+      "std_fp": 14.370107863199914,
+      "seeds_present": 5
+    },
+    {
+      "anomaly_weight": 1.5,
+      "mean_f1": 0.9681657134840282,
+      "std_f1": 0.0033734577378381923,
+      "mean_precision": 0.9709259984708206,
+      "std_precision": 0.01359238146748249,
+      "mean_recall": 0.9656366215414124,
+      "std_recall": 0.010014505147191335,
+      "mean_fn": 112.6,
+      "std_fn": 32.80701144572605,
+      "mean_fp": 95.6,
+      "std_fp": 46.773924359625845,
+      "seeds_present": 5
+    },
+    {
+      "anomaly_weight": 2.0,
+      "mean_f1": 0.9679116359293815,
+      "std_f1": 0.003122069960942821,
+      "mean_precision": 0.9677380964968896,
+      "std_precision": 0.007890657120877,
+      "mean_recall": 0.9681392269277531,
+      "std_recall": 0.004724896813588255,
+      "mean_fn": 104.4,
+      "std_fn": 15.469324484281788,
+      "mean_fp": 106.0,
+      "std_fp": 27.147743920996454,
+      "seeds_present": 5
+    },
+    {
+      "anomaly_weight": 2.5,
+      "mean_f1": 0.9657861604659477,
+      "std_f1": 0.004640937905089275,
+      "mean_precision": 0.9591031318324973,
+      "std_precision": 0.011674802335968177,
+      "mean_recall": 0.9726560185821705,
+      "std_recall": 0.0038174322806264617,
+      "mean_fn": 89.6,
+      "std_fn": 12.501999840025594,
+      "mean_fp": 136.4,
+      "std_fp": 41.04022417092772,
+      "seeds_present": 5
+    },
+    {
+      "anomaly_weight": 3.0,
+      "mean_f1": 0.9655215655596893,
+      "std_f1": 0.004201544084426503,
+      "mean_precision": 0.9583250375547436,
+      "std_precision": 0.009866032851821346,
+      "mean_recall": 0.9728999580082889,
+      "std_recall": 0.004668972447213965,
+      "mean_fn": 88.8,
+      "std_fn": 15.287249589118376,
+      "mean_fp": 139.0,
+      "std_fp": 35.17811819867572,
+      "seeds_present": 5
+    }
+  ],
+  "dataset_fingerprint": "a3f18ef39df7815ea3fa7071259b35a9",
+  "config_fingerprint": "0cbd4503a010bfb8b6f4e5904f4567fd",
+  "scientific_note": "Global candidate weight selected based on mean validation F1 across 5 seeds. Final test set was NOT used for selection."
+}

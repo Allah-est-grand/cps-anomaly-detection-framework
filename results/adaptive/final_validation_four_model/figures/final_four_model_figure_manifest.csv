@@ -1,0 +1,11 @@
+figure_number,filename_png,filename_svg,data_source,models_included,analysis_scope,notes
+1,figure_01_final_f1_comparison.png,figure_01_final_f1_comparison.svg,Ablation results (five-seed),XGBoost; RandomForest; LinearSVM; LSTM,Five-seed final validation,
+2,figure_02_final_recall_comparison.png,figure_02_final_recall_comparison.svg,Ablation results (five-seed),XGBoost; RandomForest; LinearSVM; LSTM,Five-seed final validation,
+3,figure_03_final_precision_comparison.png,figure_03_final_precision_comparison.svg,Ablation results (five-seed),XGBoost; RandomForest; LinearSVM; LSTM,Five-seed final validation,
+4,figure_04_final_false_negatives.png,figure_04_final_false_negatives.svg,Ablation results (five-seed),XGBoost; RandomForest; LinearSVM; LSTM,Five-seed final validation,
+5,figure_05_final_false_positives.png,figure_05_final_false_positives.svg,Ablation results (five-seed),XGBoost; RandomForest; LinearSVM; LSTM,Five-seed final validation,
+6,figure_06_weight_sensitivity_f1.png,figure_06_weight_sensitivity_f1.svg,Weight sensitivity results,XGBoost; RandomForest; LinearSVM; LSTM,Seed-42 retrospective diagnostic,LinearSVM: default threshold only; LSTM eval_n=288335
+7,figure_07_weight_sensitivity_fn.png,figure_07_weight_sensitivity_fn.svg,Weight sensitivity results,XGBoost; RandomForest; LinearSVM; LSTM,Seed-42 retrospective diagnostic,
+8,figure_08_fn_transition_summary.png,figure_08_fn_transition_summary.svg,Transition summary,XGBoost; RandomForest; LinearSVM,Five-seed validation,LSTM transitions unavailable
+9,figure_09_fp_transition_summary.png,figure_09_fp_transition_summary.svg,Transition summary,XGBoost; RandomForest; LinearSVM,Five-seed validation,LSTM transitions unavailable
+10,figure_10_ablation_component_contribution.png,figure_10_ablation_component_contribution.svg,Ablation results,XGBoost; RandomForest; LinearSVM; LSTM,Five-seed validation,LSTM weight=1.0 (no up-weighting)

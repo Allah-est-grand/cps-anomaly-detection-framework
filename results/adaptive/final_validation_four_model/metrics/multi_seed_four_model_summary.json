@@ -1,0 +1,178 @@
+{
+  "validation_status": "complete",
+  "tested_seeds": [
+    42,
+    123,
+    2024,
+    2025,
+    3407
+  ],
+  "evaluated_models": [
+    "XGBoost",
+    "RandomForest",
+    "LinearSVM",
+    "LSTM"
+  ],
+  "expected_models": [
+    "XGBoost",
+    "RandomForest",
+    "LinearSVM",
+    "LSTM"
+  ],
+  "expected_record_count": 40,
+  "successful_record_count": 40,
+  "normal_weight": 1.0,
+  "anomaly_weight": 3.0,
+  "time_steps": 10,
+  "lstm_threshold": 0.5,
+  "statistics": {
+    "XGBoost": {
+      "baseline": {
+        "n_seeds": 5,
+        "mean_f1": 0.9508,
+        "std_f1": 0.0018,
+        "mean_recall": 0.9104,
+        "std_recall": 0.004,
+        "mean_precision": 0.9951,
+        "std_precision": 0.001,
+        "mean_fn": 979.0,
+        "std_fn": 43.39,
+        "mean_fp": 49.4,
+        "std_fp": 10.16,
+        "mean_evaluation_n": 288344.0
+      },
+      "weighted_retraining": {
+        "n_seeds": 5,
+        "mean_f1": 0.9627,
+        "std_f1": 0.0014,
+        "mean_recall": 0.9435,
+        "std_recall": 0.0027,
+        "mean_precision": 0.9827,
+        "std_precision": 0.0008,
+        "mean_fn": 617.2,
+        "std_fn": 29.18,
+        "mean_fp": 181.4,
+        "std_fp": 9.13,
+        "mean_evaluation_n": 288344.0
+      },
+      "improvement": {
+        "f1_improvement": 0.0119,
+        "recall_improvement": 0.0331,
+        "fn_reduction": 361.8,
+        "fp_change": 132.0
+      }
+    },
+    "RandomForest": {
+      "baseline": {
+        "n_seeds": 5,
+        "mean_f1": 0.9085,
+        "std_f1": 0.0048,
+        "mean_recall": 0.8328,
+        "std_recall": 0.0081,
+        "mean_precision": 0.9994,
+        "std_precision": 0.0003,
+        "mean_fn": 1827.0,
+        "std_fn": 87.9,
+        "mean_fp": 6.0,
+        "std_fp": 2.0,
+        "mean_evaluation_n": 288344.0
+      },
+      "weighted_retraining": {
+        "n_seeds": 5,
+        "mean_f1": 0.9409,
+        "std_f1": 0.0019,
+        "mean_recall": 0.8896,
+        "std_recall": 0.0035,
+        "mean_precision": 0.9984,
+        "std_precision": 0.0006,
+        "mean_fn": 1206.0,
+        "std_fn": 38.68,
+        "mean_fp": 16.0,
+        "std_fp": 5.66,
+        "mean_evaluation_n": 288344.0
+      },
+      "improvement": {
+        "f1_improvement": 0.0324,
+        "recall_improvement": 0.0568,
+        "fn_reduction": 621.0,
+        "fp_change": 10.0
+      }
+    },
+    "LinearSVM": {
+      "baseline": {
+        "n_seeds": 5,
+        "mean_f1": 0.8334,
+        "std_f1": 0.0016,
+        "mean_recall": 0.7213,
+        "std_recall": 0.0023,
+        "mean_precision": 0.9868,
+        "std_precision": 0.0005,
+        "mean_fn": 3044.4,
+        "std_fn": 24.98,
+        "mean_fp": 105.0,
+        "std_fp": 4.24,
+        "mean_evaluation_n": 288344.0
+      },
+      "weighted_retraining": {
+        "n_seeds": 5,
+        "mean_f1": 0.8575,
+        "std_f1": 0.0018,
+        "mean_recall": 0.7693,
+        "std_recall": 0.0032,
+        "mean_precision": 0.9686,
+        "std_precision": 0.0027,
+        "mean_fn": 2520.2,
+        "std_fn": 34.08,
+        "mean_fp": 272.2,
+        "std_fp": 24.95,
+        "mean_evaluation_n": 288344.0
+      },
+      "improvement": {
+        "f1_improvement": 0.0241,
+        "recall_improvement": 0.048,
+        "fn_reduction": 524.2,
+        "fp_change": 167.2
+      }
+    },
+    "LSTM": {
+      "baseline": {
+        "n_seeds": 5,
+        "mean_f1": 0.969,
+        "std_f1": 0.0018,
+        "mean_recall": 0.9587,
+        "std_recall": 0.0048,
+        "mean_precision": 0.9796,
+        "std_precision": 0.0045,
+        "mean_fn": 451.4,
+        "std_fn": 52.14,
+        "mean_fp": 218.4,
+        "std_fp": 49.7,
+        "mean_evaluation_n": 288335.0
+      },
+      "weighted_retraining": {
+        "n_seeds": 5,
+        "mean_f1": 0.966,
+        "std_f1": 0.0038,
+        "mean_recall": 0.978,
+        "std_recall": 0.0022,
+        "mean_precision": 0.9543,
+        "std_precision": 0.0079,
+        "mean_fn": 240.4,
+        "std_fn": 23.46,
+        "mean_fp": 511.8,
+        "std_fp": 92.38,
+        "mean_evaluation_n": 288335.0
+      },
+      "improvement": {
+        "f1_improvement": -0.003,
+        "recall_improvement": 0.0193,
+        "fn_reduction": 211.0,
+        "fp_change": 293.4
+      }
+    }
+  },
+  "total_experiments": 40,
+  "experiment_scope": "four_model_lstm_controlled_extension",
+  "scientific_interpretation": "deep-learning comparator under the retained data representation",
+  "evaluation_population_note": "Classical models use full test rows. LSTM uses valid 10-row sliding-window endpoints only. No padding is used. First 9 LSTM test rows are excluded from LSTM metrics."
+}

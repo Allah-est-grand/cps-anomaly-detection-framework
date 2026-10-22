@@ -1,0 +1,154 @@
+
+# ============================================================
+# CPS ANOMALY DETECTION FRAMEWORK
+# Git ignore rules for scientific reproducibility
+# ============================================================
+
+# ------------------------------------------------------------
+# 1. Python cache and compiled files
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ------------------------------------------------------------
+# 2. Python and Conda environments
+# ------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+conda-meta/
+.ipynb_checkpoints/
+
+# ------------------------------------------------------------
+# 3. Original and generated datasets
+# ------------------------------------------------------------
+
+# Large final experimental dataset
+/results/adaptive/retraining/datasets/
+
+# Original datasets at project root
+/merged.csv
+/anomalous_*.csv
+
+# Other large dataset formats
+*.csv.gz
+*.parquet
+*.feather
+*.hdf5
+
+# ------------------------------------------------------------
+# 4. Saved machine learning models
+# ------------------------------------------------------------
+*.pkl
+*.pickle
+*.keras
+*.h5
+*.joblib
+
+# ------------------------------------------------------------
+# 5. NumPy binary arrays and checkpoints
+# ------------------------------------------------------------
+*.npz
+*.npy
+*.ckpt
+*.ckpt.*
+*.weights.h5
+
+# ------------------------------------------------------------
+# 6. Logs and temporary files
+# ------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.old
+
+# ------------------------------------------------------------
+# 7. Local IDE configuration
+# ------------------------------------------------------------
+.vscode/
+.idea/
+*.code-workspace
+
+# ------------------------------------------------------------
+# 8. Operating system files
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------
+# 9. Secrets and local credentials
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# ------------------------------------------------------------
+# 10. Build and packaging artifacts
+# ------------------------------------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ------------------------------------------------------------
+# 11. Local audit archives
+# ------------------------------------------------------------
+audit_cps_etape*.zip
+
+# ------------------------------------------------------------
+# 12. Scientific outputs
+# ------------------------------------------------------------
+# Do not globally ignore CSV, JSON, PNG, SVG or TXT files.
+# Selected final results and figures are needed for
+# scientific traceability and reproducibility.
+#
+# Review each selected file before the first commit.
+
+# ------------------------------------------------------------
+# 13. Reproducibility documentation
+# ------------------------------------------------------------
+# Keep documentation eligible for Git tracking:
+# README.md
+# environment.yml
+# requirements.txt
+# CITATION.cff
+# data/dataset_manifest.json
+# docs/reproducibility.md
+# docs/experimental_protocol.md
+
+# ------------------------------------------------------------
+# 14. Large intermediate experimental datasets
+# ------------------------------------------------------------
+/results/adaptive/scenario_separated_validation/datasets/
+/results/adaptive/no_leakage_validation/datasets/
+/results/adaptive/strict_generalization_validation/datasets/
+/results/adaptive/balanced_hardcase_test/datasets/
+
+# ------------------------------------------------------------
+# 15. Large intermediate prediction exports
+# ------------------------------------------------------------
+/results/adaptive/direct_hardcase_test/predictions/
+
+# ------------------------------------------------------------
+# 16. Large standalone robustness dataset
+# ------------------------------------------------------------
+/test_subset_robustness.csv
+
+# ============================================================
+# END OF FILE
+# ============================================================

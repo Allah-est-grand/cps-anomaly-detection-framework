@@ -1,0 +1,434 @@
+{
+  "models": [
+    "XGBoost",
+    "RandomForest",
+    "LinearSVM",
+    "LSTM"
+  ],
+  "seed": 42,
+  "analysis_scope": "single_split_seed42_retrospective_diagnostic",
+  "historical_weight_grid": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0
+  ],
+  "weight_grid_source": [
+    "results\\adaptive\\final_validation\\ablation\\metrics\\ablation_summary.json",
+    "results\\adaptive\\final_validation\\error_analysis\\metrics\\error_analysis_summary.json",
+    "results\\adaptive\\final_validation\\metrics\\multi_seed_summary.json",
+    "results\\adaptive\\final_validation\\Multi_seet_validation_Ancien_Ne_pas_a_utiliser\\multi_seed_summary.json",
+    "results\\adaptive\\final_validation\\ablation\\reports\\ablation_analysis_report.txt",
+    "results\\adaptive\\final_validation\\error_analysis\\reports\\error_analysis_report.txt",
+    "results\\adaptive\\weight_sensitivity_experiment\\metrics\\weight_sensitivity_best_threshold_metrics.csv",
+    "results\\adaptive\\weight_sensitivity_experiment\\metrics\\weight_sensitivity_default_metrics.csv",
+    "results\\adaptive\\final_validation_four_model\\metrics\\multi_seed_four_model_summary.json",
+    "results\\adaptive\\final_validation_three_model\\metrics\\multi_seed_three_model_summary.json",
+    "results\\adaptive\\final_validation_four_model\\ablation\\reports\\four_model_ablation_report.txt",
+    "results\\adaptive\\no_leakage_validation\\reports\\no_leakage_validation_report.txt",
+    "results\\adaptive\\scenario_separated_validation\\reports\\scenario_separated_validation_report.txt",
+    "results\\adaptive\\strict_generalization_validation\\reports\\strict_generalization_validation_report.txt",
+    "results\\adaptive\\weighted_retraining\\reports\\weighted_retraining_report.txt",
+    "results\\adaptive\\weight_sensitivity_experiment\\reports\\weight_sensitivity_report.txt"
+  ],
+  "historical_threshold_logic": {
+    "mode": "test_set_diagnostic_best_threshold",
+    "threshold_candidates": [
+      0.01,
+      0.02,
+      0.03,
+      0.05,
+      0.075,
+      0.1,
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.225,
+      0.25,
+      0.275,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "selection_criterion": "maximize_f1_on_test",
+    "note": "Retrospective diagnostic analysis using 16-threshold test-set sweep. NOT validated optimization. For probability-output models (XGBoost, RF, LSTM) only."
+  },
+  "threshold_candidate_grid": [
+    0.01,
+    0.02,
+    0.03,
+    0.05,
+    0.075,
+    0.1,
+    0.125,
+    0.15,
+    0.175,
+    0.2,
+    0.225,
+    0.25,
+    0.275,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "linearsvm_note": "LinearSVM uses decision_function >= 0. Probability threshold grid NOT applied to raw scores.",
+  "lstm_note": "LSTM computed directly with test-set evaluation (evaluation_n=288335). NOT reused from internal-validation pilot.",
+  "total_records": 35,
+  "execution_plan": {
+    "xgboost_reused": [],
+    "xgboost_to_compute": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0
+    ],
+    "rf_reused": [],
+    "rf_to_compute": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0
+    ],
+    "svm_reused": [],
+    "svm_to_compute": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0
+    ],
+    "lstm_reused": [],
+    "lstm_to_compute": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0
+    ]
+  },
+  "weight_sensitivity_data": [
+    {
+      "model_name": "XGBoost",
+      "anomaly_weight": 1.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9525765318305555,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "XGBoost",
+      "anomaly_weight": 1.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9710509168761053,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.3
+    },
+    {
+      "model_name": "XGBoost",
+      "anomaly_weight": 2.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9577278106508875,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "XGBoost",
+      "anomaly_weight": 2.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9661325564457393,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.3
+    },
+    {
+      "model_name": "XGBoost",
+      "anomaly_weight": 3.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9620478262904207,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "XGBoost",
+      "anomaly_weight": 3.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9692697535130155,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.4
+    },
+    {
+      "model_name": "XGBoost",
+      "anomaly_weight": 4.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9608990433732701,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "XGBoost",
+      "anomaly_weight": 4.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9608990433732701,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "XGBoost",
+      "anomaly_weight": 5.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9656124844634719,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "XGBoost",
+      "anomaly_weight": 5.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9656124844634719,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "RandomForest",
+      "anomaly_weight": 1.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9066253002401922,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "RandomForest",
+      "anomaly_weight": 1.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9665407447382622,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.075
+    },
+    {
+      "model_name": "RandomForest",
+      "anomaly_weight": 2.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9308422185268512,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "RandomForest",
+      "anomaly_weight": 2.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9772872388944632,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.175
+    },
+    {
+      "model_name": "RandomForest",
+      "anomaly_weight": 3.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9404583111283368,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "RandomForest",
+      "anomaly_weight": 3.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.981663929939792,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.25
+    },
+    {
+      "model_name": "RandomForest",
+      "anomaly_weight": 4.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9535039144548405,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "RandomForest",
+      "anomaly_weight": 4.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.982136347065257,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.3
+    },
+    {
+      "model_name": "RandomForest",
+      "anomaly_weight": 5.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9608500590318773,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "RandomForest",
+      "anomaly_weight": 5.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9805074397358781,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.3
+    },
+    {
+      "model_name": "LinearSVM",
+      "anomaly_weight": 1.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.8336242924403534,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.0
+    },
+    {
+      "model_name": "LinearSVM",
+      "anomaly_weight": 2.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.8452585981942488,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.0
+    },
+    {
+      "model_name": "LinearSVM",
+      "anomaly_weight": 3.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.8579600592471526,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.0
+    },
+    {
+      "model_name": "LinearSVM",
+      "anomaly_weight": 4.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.8582274636837577,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.0
+    },
+    {
+      "model_name": "LinearSVM",
+      "anomaly_weight": 5.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.8595646504162905,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.0
+    },
+    {
+      "model_name": "LSTM",
+      "anomaly_weight": 1.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9734799482535575,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "LSTM",
+      "anomaly_weight": 1.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9734799482535575,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "LSTM",
+      "anomaly_weight": 2.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9691241914024866,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "LSTM",
+      "anomaly_weight": 2.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9691241914024866,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "LSTM",
+      "anomaly_weight": 3.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9607596075960759,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "LSTM",
+      "anomaly_weight": 3.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9607596075960759,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "LSTM",
+      "anomaly_weight": 4.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9560822898032201,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "LSTM",
+      "anomaly_weight": 4.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9560822898032201,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "LSTM",
+      "anomaly_weight": 5.0,
+      "threshold_mode": "default",
+      "mean_f1_score": 0.9532353333037261,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    },
+    {
+      "model_name": "LSTM",
+      "anomaly_weight": 5.0,
+      "threshold_mode": "test_set_diagnostic",
+      "mean_f1_score": 0.9532353333037261,
+      "std_f1_score": 0.0,
+      "n_seeds": 1,
+      "selected_threshold": 0.5
+    }
+  ],
+  "reproduction_status": {
+    "lstm_transitions": "sample_level_transitions_unavailable"
+  },
+  "scientific_note": "Weight sensitivity diagnostic using historical grid [1,2,3,4,5] on seed 42 ONLY. Single-split retrospective analysis for Figures 6-9 extension. Five-seed robustness covered separately in final validation."
+}

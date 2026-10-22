@@ -1,0 +1,16 @@
+corrected_fn,persistent_fn,newly_introduced_fn,source_fn,target_fn,fn_reduction,corrected_fp,persistent_fp,newly_introduced_fp,source_fp,target_fp,fp_reduction,source_f1,target_f1,f1_change,source_variant,target_variant,comparison,seed,model_name
+1,3042,3,3043,3045,-2,0,98,2,98,100,-2,0.8338358990636406,0.8336242924403534,-0.00021160662328723046,baseline,retraining_without_weighting,baseline_vs_retraining,42,LinearSVM
+521,2524,1,3045,2525,520,2,98,158,100,256,-156,0.8336242924403534,0.8579600592471526,0.024335766806799164,retraining_without_weighting,weighted_retraining,retraining_vs_weighted,42,LinearSVM
+522,2521,4,3043,2525,518,2,96,160,98,256,-158,0.8338358990636406,0.8579600592471526,0.024124160183511933,baseline,weighted_retraining,baseline_vs_weighted,42,LinearSVM
+0,3082,2,3082,3084,-2,0,108,2,108,110,-2,0.8309844230157889,0.8307724912578149,-0.0002119317579739599,baseline,retraining_without_weighting,baseline_vs_retraining,123,LinearSVM
+516,2568,3,3084,2571,513,1,109,144,110,253,-143,0.8307724912578149,0.8554019457245263,0.024629454466711387,retraining_without_weighting,weighted_retraining,retraining_vs_weighted,123,LinearSVM
+516,2566,5,3082,2571,511,1,107,146,108,253,-145,0.8309844230157889,0.8554019457245263,0.024417522708737427,baseline,weighted_retraining,baseline_vs_weighted,123,LinearSVM
+1,3022,0,3023,3022,1,0,104,0,104,104,0,0.8348037402926726,0.83486529318542,6.155289274745179e-05,baseline,retraining_without_weighting,baseline_vs_retraining,2024,LinearSVM
+546,2476,1,3022,2477,545,4,100,168,104,268,-164,0.83486529318542,0.8602270991394674,0.025361805954047356,retraining_without_weighting,weighted_retraining,retraining_vs_weighted,2024,LinearSVM
+546,2477,0,3023,2477,546,4,100,168,104,268,-164,0.8348037402926726,0.8602270991394674,0.025423358846794808,baseline,weighted_retraining,baseline_vs_weighted,2024,LinearSVM
+1,3020,0,3021,3020,1,1,107,0,108,107,1,0.8347504621072088,0.834856086612094,0.00010562450488516006,baseline,retraining_without_weighting,baseline_vs_retraining,2025,LinearSVM
+503,2517,4,3020,2521,499,4,103,166,107,269,-162,0.834856086612094,0.857624004898959,0.022767918286864974,retraining_without_weighting,weighted_retraining,retraining_vs_weighted,2025,LinearSVM
+503,2518,3,3021,2521,500,4,104,165,108,269,-161,0.8347504621072088,0.857624004898959,0.022873542791750134,baseline,weighted_retraining,baseline_vs_weighted,2025,LinearSVM
+0,3053,1,3053,3054,-1,0,107,0,107,107,0,0.8328219236059676,0.8327601714195016,-6.17521864659798e-05,baseline,retraining_without_weighting,baseline_vs_retraining,3407,LinearSVM
+548,2506,1,3054,2507,547,3,104,211,107,315,-208,0.8327601714195016,0.8564306064306064,0.023670435011104773,retraining_without_weighting,weighted_retraining,retraining_vs_weighted,3407,LinearSVM
+547,2506,1,3053,2507,546,3,104,211,107,315,-208,0.8328219236059676,0.8564306064306064,0.023608682824638794,baseline,weighted_retraining,baseline_vs_weighted,3407,LinearSVM

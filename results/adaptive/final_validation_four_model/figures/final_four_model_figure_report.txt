@@ -1,0 +1,81 @@
+================================================================================
+FINAL FOUR-MODEL REPORT FIGURES
+================================================================================
+Generated: 2026-10-13 01:10:10
+Framework: CPS Anomaly Detection Framework
+Thesis: Master's Thesis Research - Dalian University of Technology
+
+DATA SOURCES:
+1. Ablation results (FIVE-SEED): results\adaptive\final_validation_four_model\ablation\metrics\four_model_ablation_results.csv
+2. Weight sensitivity (SEED-42 DIAGNOSTIC): results\adaptive\final_validation_four_model\report_extensions\weight_sensitivity\four_model_weight_sensitivity_results.csv
+3. Transition summary (FIVE-SEED): results\adaptive\final_validation_four_model\report_extensions\transitions\four_model_transitions_summary.csv
+
+FIGURES GENERATED:
+Figure 1: figure_01_final_f1_comparison.png
+  - Data source: Ablation results (five-seed)
+  - Models: XGBoost; RandomForest; LinearSVM; LSTM
+  - Analysis scope: Five-seed final validation
+
+Figure 2: figure_02_final_recall_comparison.png
+  - Data source: Ablation results (five-seed)
+  - Models: XGBoost; RandomForest; LinearSVM; LSTM
+  - Analysis scope: Five-seed final validation
+
+Figure 3: figure_03_final_precision_comparison.png
+  - Data source: Ablation results (five-seed)
+  - Models: XGBoost; RandomForest; LinearSVM; LSTM
+  - Analysis scope: Five-seed final validation
+
+Figure 4: figure_04_final_false_negatives.png
+  - Data source: Ablation results (five-seed)
+  - Models: XGBoost; RandomForest; LinearSVM; LSTM
+  - Analysis scope: Five-seed final validation
+
+Figure 5: figure_05_final_false_positives.png
+  - Data source: Ablation results (five-seed)
+  - Models: XGBoost; RandomForest; LinearSVM; LSTM
+  - Analysis scope: Five-seed final validation
+
+Figure 6: figure_06_weight_sensitivity_f1.png
+  - Data source: Weight sensitivity results
+  - Models: XGBoost; RandomForest; LinearSVM; LSTM
+  - Analysis scope: Seed-42 retrospective diagnostic
+  - Notes: LinearSVM: default threshold only; LSTM eval_n=288335
+
+Figure 7: figure_07_weight_sensitivity_fn.png
+  - Data source: Weight sensitivity results
+  - Models: XGBoost; RandomForest; LinearSVM; LSTM
+  - Analysis scope: Seed-42 retrospective diagnostic
+
+Figure 8: figure_08_fn_transition_summary.png
+  - Data source: Transition summary
+  - Models: XGBoost; RandomForest; LinearSVM
+  - Analysis scope: Five-seed validation
+  - Notes: LSTM transitions unavailable
+
+Figure 9: figure_09_fp_transition_summary.png
+  - Data source: Transition summary
+  - Models: XGBoost; RandomForest; LinearSVM
+  - Analysis scope: Five-seed validation
+  - Notes: LSTM transitions unavailable
+
+Figure 10: figure_10_ablation_component_contribution.png
+  - Data source: Ablation results
+  - Models: XGBoost; RandomForest; LinearSVM; LSTM
+  - Analysis scope: Five-seed validation
+  - Notes: LSTM weight=1.0 (no up-weighting)
+
+IMPORTANT SCIENTIFIC NOTES:
+- Final conclusions are model-dependent.
+- Supervised classifiers (XGBoost, RF, LinearSVM) benefit from controlled retraining and anomaly-aware weighting.
+- LSTM benefits from additional retraining data, but selected final anomaly weight is 1.0 (no up-weighting).
+- Weight sensitivity is SEED-42 RETROSPECTIVE DIAGNOSTIC only (not five-seed robustness).
+- Main final conclusions come from five-seed final validation/ablation.
+- LSTM evaluation population: 288335 sequence endpoints.
+- Classical models: 288344 test samples.
+- LSTM sample-level transitions: UNAVAILABLE (not fabricated).
+- Diagnostic threshold selection is NOT claimed as 'optimal'.
+
+================================================================================
+END OF FINAL FOUR-MODEL FIGURE REPORT
+================================================================================

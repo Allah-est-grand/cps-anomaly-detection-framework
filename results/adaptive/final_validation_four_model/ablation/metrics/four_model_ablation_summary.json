@@ -1,0 +1,32 @@
+{
+  "models": [
+    "XGBoost",
+    "RandomForest",
+    "LinearSVM",
+    "LSTM"
+  ],
+  "seeds": [
+    42,
+    123,
+    2024,
+    2025,
+    3407
+  ],
+  "variants": [
+    "baseline",
+    "retraining_without_weighting",
+    "weighted_retraining"
+  ],
+  "anomaly_weights": {
+    "XGBoost": 3.0,
+    "RandomForest": 3.0,
+    "LinearSVM": 3.0,
+    "LSTM": 1.0
+  },
+  "total_records": 60,
+  "existing_ablation_reused": true,
+  "existing_ablation_validation_errors": [],
+  "dataset_fingerprint": "a3f18ef39df7815ea3fa7071259b35a9",
+  "config_fingerprint": "b5b4cabf2c269b50cbe3894cbf247696",
+  "scientific_note": "For LSTM, both retraining variants use weight=1.0 (no anomaly up-weighting selected)."
+}
